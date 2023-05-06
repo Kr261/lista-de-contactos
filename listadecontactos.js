@@ -31,7 +31,7 @@ function imprimirContactos(){
         console.log("Nombre: " + contactos[i].nombre);
         console.log("Apellido: " + contactos[i].apellido);
         console.log("Telefono: " + contactos[i].telefono);
-        console.log(`Ubicaciones:\n Ciudad:  ${contactos[i].ciudad}\n Dirección: ${contactos[i].direccion}`);
+        console.log(`Ubicaciones:\n Ciudad:  ${contactos[i].ubicaciones.ciudad}\n Dirección: ${contactos[i].ubicaciones.direccion}`);
     }
 }
 
@@ -41,3 +41,7 @@ agregarContacto(4, "Melissa", "Perez", 3098677865, "Barranquilla", "Quizas")
 
 imprimirContactos()
 
+console.log(contactos)
+
+const newContactos = JSON.stringify(contactos);
+console.log(newContactos) 

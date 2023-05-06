@@ -1,0 +1,19 @@
+[
+    {"id":0,
+    "nombre":"Kristin",
+    "apellido":"Motato",
+    "telefono":3173400581,
+    "ubicaciones":
+        {"ciudad":"Valledupar",
+        "direccion":"Torres del Norte"}
+    },
+
+    {"id":4,
+    "nombre":"Melissa",
+    "apellido":"Perez",
+    "telefono":3098677865,
+    "ubicaciones":
+        {"ciudad":"Barranquilla",
+        "direccion":"Quizas"}
+    }
+]
