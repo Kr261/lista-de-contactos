@@ -35,13 +35,41 @@ function imprimirContactos(){
     }
 }
 
-//imprimirContactos()
-
 agregarContacto(4, "Melissa", "Perez", 3098677865, "Barranquilla", "Quizas")
 
 imprimirContactos()
 
-console.log(contactos)
+// Función para actualizar un contacto 
 
-const newContactos = JSON.stringify(contactos);
-console.log(newContactos) 
+function actualizarContacto(contactos, id, [nombre,
+  apellido,
+  telefono,
+  ciudad,
+  direccion]
+) {
+
+  const indice = contactos.findIndex(contacto => contacto.id === id);
+
+  if (indice !== -1) {
+    
+    // Actualizar el contacto con los nuevos datos
+   contactos[indice] = [nombre,
+apellido,
+telefono,
+ciudad,
+direccion];
+    console.log('Contacto actualizado:', [nombre,
+apellido,
+telefono,
+ciudad,
+direccion]);
+  } else {
+    console.log('Error.');
+  }
+
+  return imprimirContactos(contactos);
+
+}
+
+console.log(actualizarContacto(contactos,4,[ "Melissa", "Perez", 3098677865, "Ocaña", "sucasa"]))
+
